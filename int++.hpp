@@ -82,8 +82,8 @@ public:
 
 	i32 operator+(const int& right)
 	{
-		value += right;
-		return *this;
+		i32 temp(value + right);
+		return temp;
 	}
 
 	i32 operator+=(const i32& right)
@@ -114,7 +114,7 @@ public:
 
 	i32 operator-(const int& right)
 	{
-		value -= right;
+		i32 temp(value - right);
 		return *this;
 	}
 
@@ -138,8 +138,8 @@ public:
 		{
 			throw invalid_argument("Tried to devide by zero");
 		}
-		value /= right;
-		return *this;
+		i32 temp(value /= right);
+		return temp;
 	}
 
 	i32 operator/=(const i32& right)
@@ -158,8 +158,8 @@ public:
 
 	i32 operator*(const int& right)
 	{
-		value *= right;
-		return *this;
+		i32 temp(value * right);
+		return temp;
 	}
 
 	i32 operator*=(const i32& right)
@@ -202,18 +202,18 @@ public:
 	//bitwise overloads 
 	i32 operator&(i32& right)
 	{
-		value = value & right.value;
-		return *this;
+		i32 temp(value & right.value);
+		return temp;
 	}
 	i32 operator|(i32& right)
 	{
-		value = value | right.value;
-		return *this;
+		i32 temp(value | right.value);
+		return temp;
 	}
 	i32 operator^(i32& right)
 	{
-		value = value ^ right.value;
-		return *this;
+		i32 temp(value ^ right.value);
+		return temp;
 	}
 	i32 operator~()
 	{
@@ -222,13 +222,13 @@ public:
 	}
 	i32 operator<<(i32& right)
 	{
-		value = value << right.value;
-		return *this;
+		i32 temp(value << right.value);
+		return temp;
 	}
 	i32 operator>>(i32& right)
 	{
-		value = value >> right.value;
-		return *this;
+		i32 temp(value >> right.value);
+		return temp;
 	}
 
 
