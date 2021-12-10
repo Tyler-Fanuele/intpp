@@ -1,7 +1,6 @@
 #ifndef INT
 
 #define INT
-	
 
 #include <iostream>
 #include <cassert>
@@ -116,7 +115,7 @@ public:
 	i32 operator-(const int& right)
 	{
 		i32 temp(value - right);
-		return *this;
+		return temp;
 	}
 
 	i32 operator-=(const i32& right)
