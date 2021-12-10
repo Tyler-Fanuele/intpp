@@ -1,6 +1,7 @@
 #ifndef INT
 
 #define INT
+	
 
 #include <iostream>
 #include <cassert>
